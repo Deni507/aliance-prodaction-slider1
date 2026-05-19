@@ -139,3 +139,31 @@ modalClose.addEventListener("click", (event) => {
   event.preventDefault();
   modal.classList.remove("is-open");
 });
+
+modal.addEventListener("click", (event) => {
+  event.target.matches(".modal") ? modal.classList.remove("is-open") : null;
+});
+
+document.addEventListener("keydown", (event) => {
+  event.key === "Escape" ? modal.classList.remove("is-open") : null;
+  event.key === "Escape" ? modals[1].classList.remove("is-open") : null;
+});
+
+const modalSubmit = document.querySelector("#submit");
+const modals = document.querySelectorAll(".modal");
+const modalsClose = document.querySelectorAll(".modal-close");
+modalSubmit.addEventListener("click", (event) => {
+  event.preventDefault();
+  modals[0].classList.remove("is-open");
+  modals[1].classList.add("is-open");
+});
+
+modalsClose.forEach((close) => {
+  close.addEventListener("click", (event) => {
+    event.preventDefault();
+    modals[1].classList.remove("is-open");
+  });
+});
+modals[1].addEventListener("click", (event) => {
+  event.target.matches(".modal") ? modals[1].classList.remove("is-open") : null;
+});

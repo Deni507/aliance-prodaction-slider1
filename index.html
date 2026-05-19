@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -93,7 +94,7 @@
       <svg class="logo-svg logo-dark">
         <use href="img/sprite.svg#logo"></use>
       </svg>
-    </a>  
+    </a>
     <!-- /.logo-link -->
     <ul class="header-nav">
       <li class="header-nav-item">
@@ -118,11 +119,11 @@
       </svg>
       <a href="tel:79998880099" class="header-phone-link">+7 (499) 686-10-14</a>
     </div>
-    <button class="navbar-button button">
+    <button class="navbar-button button" data-toggle="modal">
       <svg class="button-icon" width="24" height="24">
         <use href="img/sprite.svg#phone"></use>
       </svg>
-      <span class="button-text" data-toggle="modal">Получить консультацию</span>
+      <span class="button-text">Получить консультацию</span>
     </button>
   </nav>
   <!-- /.navbar -->
@@ -714,7 +715,7 @@
           </div>
         </div>
         <div class="modal-form-footer">
-          <button type="submit" class="button modal-form-button">
+          <button type="submit" class="button modal-form-button" id="submit">
             Отправить заявку
           </button>
           <div class="notify">
@@ -728,6 +729,21 @@
           </div>
         </div>
       </form>
+    </div>
+  </div>
+  <div class="modal">
+    <div class="modal-dialog">
+      <h2 class="modal-title">Спасибо!</h2>
+      <a href="#" class="modal-close">
+        <svg class="close-icon" width="24" height="24">
+          <use href="img/sprite.svg#close"></use>
+        </svg>
+      </a>
+      <p class="modal-text">
+        Оставьте заявку, наш менеджер свяжется с Вами в ближайшее время
+        ответит на все интересующие вопросы и поможем даже в самых сложных
+        случаях!
+      </p>
     </div>
   </div>
   <script src="js/swiper-bundle.min.js"></script>
